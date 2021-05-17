@@ -34,7 +34,7 @@ Integer Overflow
     }
 
 
-If calls this function with a large _value, which is smaller than the senderBalance but the sum of (balances\[\_to\]+\_value) > 2^256, it will cause an integer overflow at line ('balances[\_to] += _value;') and finally transfer few of tokens to receiver's accounts. This integer overflow vulnerability will cause huge economic losses because the balance of sender has been deducted.
+If calls this function with a large _value, which is smaller than the senderBalance but the sum of (balances\[\_to\]+\_value) > 2^256, it will cause an integer overflow at line ('balances[\_to] += _value;') and finally transfer few of tokens to receiver's accounts. This integer overflow vulnerability allows the owner to cause unexpected economic losses between two accounts with large amounts of tokens
 
 The founder should check the sum of (balances\[\_to\]+\_value) before deducting the balance of sender, such as 'if (balances[_to] < balances[\_to] + \_value) throw;'.
 
