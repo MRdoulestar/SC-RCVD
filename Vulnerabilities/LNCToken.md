@@ -38,3 +38,11 @@ If calls this function with a large _value, which is smaller than the senderBala
 
 The founder should check the sum of (balances\[\_to\]+\_value) before changing the balances of sender and receiver, such as 'if (balances[_to] < balances[\_to] + \_value) throw;'.
 
+
+	function addToken(address invest,uint256 value){
+		if(msg.sender!=master)throw;
+		balances[invest]+=value;
+		totalTokens+=value;
+	}
+
+The similar Integer Overflow vulnerability in addToken function. This vulnerability allows owner to add token to users. However, the unlimited value can change balance of user to zero.
