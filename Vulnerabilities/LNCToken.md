@@ -2,6 +2,9 @@ LNCToken
 ---------------
 https://etherscan.io/address/0x63e634330a20150dbb61b15648bc73855d6ccf07#code
 
+![](./img/LNC.png)
+  *Figure 1. LNC Token Information*
+
 Integer Overflow
 
 
@@ -46,3 +49,12 @@ The founder should check the sum of (balances\[\_to\]+\_value) before changing t
 	}
 
 The similar Integer Overflow vulnerability in addToken function. This vulnerability allows owner to add token to users. However, the unlimited value can change balance of user to zero.
+
+## Exploit
+
+![](./img/process-1.png)
+*Figure 2. The Result of addToken() to target account.
+
+
+![](./img/process-2.png)
+*Figure 3. The Result of addToken() to attack target account!
