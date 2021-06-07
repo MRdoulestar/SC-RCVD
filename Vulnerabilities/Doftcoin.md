@@ -22,9 +22,9 @@ The  Integer Overflow vulnerability in mintToken function similar to CVE-2018-11
 
 ## Exploit
 
-![](./img/process-1.png)
-*Figure 2. The Result of addToken() to target account.
+![](./img/DSC-1.png)
+*Figure 2. The Result of mintToken() to target account.
 
+![](./img/DSC-2.png)
+*Figure 3. The Result of mintToken() to attack target account!
 
-![](./img/process-2.png)
-*Figure 3. The Result of addToken() to attack target account!
